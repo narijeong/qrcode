@@ -64,7 +64,8 @@
               Generate
             </v-btn>
           </v-col>
-  
+          <div id="reader" width="600px"></div>
+
           <v-col cols="auto">
             <v-btn
               href="https://community.vuetifyjs.com/"
@@ -85,21 +86,37 @@
         </v-row>
       </v-responsive>
     </v-container>
+    <QRCodeScanner
+    :qrbox="250" 
+    :fps="10" 
+    style="width: 500px;"
+    @result="onScan"
+  />
   </template>
   
   <script>
+
     //
 import QrcodeVue from 'qrcode.vue'
+import QRCodeScanner from './QRCodeScanner.vue';
+
 export default {
     data() {
-      return {
-        value: 'https://example.com',
-        size: 300,
-      }
+        return {
+            value: "https://example.com",
+            size: 300,
+        };
     },
-    components: {
-      QrcodeVue,
+    methods: {
+        onScan(decodedText, decodedResult) {
+            // handle the message here :)
+        },
     },
-  }
+    components: { QRCodeScanner, QrcodeVue },
+    mounted() {
+        this.onScan('test', 'test')
+    }
+    
+}
   </script>
   

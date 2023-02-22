@@ -641,6 +641,11 @@
   dependencies:
     "function-bind" "^1.1.1"
 
+"html5-qrcode@^2.3.7":
+  "integrity" "sha512-Jmlok9Ynm49hgVXkdupWryf8o430proIFoQsRl1LmTg4Rq461W72omylR9yw9tsEMtswMEw3wacUM5y0agOBQA=="
+  "resolved" "https://registry.npmjs.org/html5-qrcode/-/html5-qrcode-2.3.7.tgz"
+  "version" "2.3.7"
+
 "ignore@^5.2.0":
   "integrity" "sha512-MAb38BcSbH0eHNBxn7ql2NH/kX33OkB3lZ1BNdh7ENeRChHTYsTvWrMubiIAMNS2llXEEgZ1MUOBtXChP3kaFQ=="
   "resolved" "https://registry.npmjs.org/ignore/-/ignore-5.2.4.tgz"
