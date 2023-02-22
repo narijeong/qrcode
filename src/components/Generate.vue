@@ -1,11 +1,12 @@
 <template>
     <v-container class="fill-height pl-20 pr-20">
       <v-responsive class="d-flex align-center text-center fill-height">
-        <v-img
+        <!-- <v-img
           contain
           height="150"
           src="@/assets/qrcode.png"
-        />
+        /> -->
+        <qrcode-vue :value="value" :size="size" level="H" />
   
         <div class="text-body-2 font-weight-light mb-n1">Generate</div>
   
@@ -86,7 +87,19 @@
     </v-container>
   </template>
   
-  <script setup>
+  <script>
     //
+import QrcodeVue from 'qrcode.vue'
+export default {
+    data() {
+      return {
+        value: 'https://example.com',
+        size: 300,
+      }
+    },
+    components: {
+      QrcodeVue,
+    },
+  }
   </script>
   
