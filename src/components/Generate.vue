@@ -86,19 +86,13 @@
         </v-row>
       </v-responsive>
     </v-container>
-    <QRCodeScanner
-    :qrbox="250" 
-    :fps="10" 
-    style="width: 500px;"
-    @result="onScan"
-  />
+
   </template>
   
   <script>
 
     //
 import QrcodeVue from 'qrcode.vue'
-import QRCodeScanner from './QRCodeScanner.vue';
 
 export default {
     data() {
@@ -112,7 +106,7 @@ export default {
             // handle the message here :)
         },
     },
-    components: { QRCodeScanner, QrcodeVue },
+    components: { QrcodeVue },
     mounted() {
         this.onScan('test', 'test')
     }

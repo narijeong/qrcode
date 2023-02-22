@@ -21,7 +21,9 @@
             <router-link to="/qrlist">
             <v-list-item prepend-icon="mdi-file" title="QR List" value="qrlist"></v-list-item>
             </router-link>
-            <v-list-item prepend-icon="mdi-star" title="Favorite" value="favorite"></v-list-item>
+            <router-link to="/scan">
+            <v-list-item prepend-icon="mdi-camera" title="scan" value="scan"></v-list-item>
+            </router-link>
           </v-list>
         </v-navigation-drawer>
         <v-main>

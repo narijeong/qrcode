@@ -2,6 +2,7 @@
     <div id="qr-code-full-region"></div>
 </template>
 <script>
+import {Html5QrcodeScanner} from "html5-qrcode"
 
 export default {
     name: 'qrcode-scanner',

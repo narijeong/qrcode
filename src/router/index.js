@@ -15,6 +15,14 @@ const routes = [
         component: () => import(/* webpackChunkName: "generate" */ '@/components/Generate.vue'),
       },
       {
+        path: '/scan',
+        name: 'Scan',
+        // route level code-splitting
+        // this generates a separate chunk (about.[hash].js) for this route
+        // which is lazy-loaded when the route is visited.
+        component: () => import(/* webpackChunkName: "scan" */ '@/components/Scan.vue'),
+      },
+      {
         path: '/qrlist',
         name: 'QRList',
         component: () => import(/* webpackChunkName: "QRList" */ '@/components/QRList.vue'),
